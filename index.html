@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-24">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="src/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        @keyframes gradient-xy {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-gradient {
+            background-size: 200% 200%;
+            animation: gradient-xy 6s ease infinite;
+        }
+
+        /* Lightbox Image Dragging Cursors */
+        .cursor-grab {
+            cursor: grab;
+        }
+
+        .cursor-grabbing {
+            cursor: grabbing !important;
+        }
+
+        /* Custom Scrollbar for Right Side Info Panel */
+        .custom-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .custom-scroll::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-[#050505] text-white overflow-x-hidden">
+
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600 rounded-full mix-blend-multiply filter blur-[150px] opacity-40 animate-pulse"></div>
+        <div class="absolute top-[20%] right-[-10%] w-[500px] h-[500px] bg-cyan-500 rounded-full mix-blend-multiply filter blur-[150px] opacity-40 animate-pulse" style="animation-delay: 2s"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 top-0 start-0 border-b border-white/10 bg-black/30 backdrop-blur-md">
+        <div class="max-w-[1600px] flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl 2xl:text-3xl font-black whitespace-nowrap tracking-widest">
+                    MANISHA<span class="text-purple-500">.</span>
+                </span>
+            </a>
+
+            <div class="hidden w-full md:block md:w-auto">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-white/10 rounded-lg md:flex-row md:space-x-8 2xl:space-x-12 md:mt-0 md:border-0 2xl:text-lg">
+                    <li><a href="#" class="block py-2 px-3 text-cyan-400 hover:text-cyan-300 transition-colors">Home</a></li>
+                    <li><a href="#work" class="block py-2 px-3 text-gray-300 hover:text-white transition-colors">Work</a></li>
+                    <li><a href="#services" class="block py-2 px-3 text-gray-300 hover:text-white transition-colors">Services</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="min-h-screen py-32 flex items-center justify-center relative px-4">
+        <div class="text-center max-w-4xl 2xl:max-w-6xl mx-auto relative z-10">
+
+            <div class="inline-flex items-center px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-sm 2xl:text-base font-medium mb-6">
+                <span class="w-2 h-2 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+                Graphic Designer & 3D Artist
+            </div>
+
+            <h1 class="text-5xl md:text-7xl 2xl:text-8xl font-black mb-6 leading-tight tracking-tight">
+                TURNING IDEAS INTO <br />
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient">
+                    DIGITAL REALITY
+                </span>
+            </h1>
+
+            <p class="text-gray-400 text-lg md:text-xl 2xl:text-2xl mb-10 max-w-2xl 2xl:max-w-4xl mx-auto leading-relaxed">
+                Specialized in 3D Modeling, Animation, Illustrator & Photoshop.
+                Creating visuals that speak louder than words.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#work" class="px-8 py-3 2xl:px-10 2xl:py-4 rounded-full bg-white text-black font-bold text-lg 2xl:text-xl hover:bg-gray-200 transition-all">
+                    View Portfolio
+                </a>
+                <a href="https://www.behance.net/manishabohra06" target="_blank" class="px-8 py-3 2xl:px-10 2xl:py-4 rounded-full border border-white/20 hover:border-cyan-400 hover:text-cyan-400 transition-all font-medium text-lg 2xl:text-xl">
+                    Behance Profile ↗
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-10 px-4 max-w-[1600px] mx-auto w-full">
+
+        <div class="mb-12 flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6">
+            <div>
+                <h2 class="text-4xl md:text-5xl 2xl:text-6xl font-bold mb-4">Selected Works</h2>
+                <div class="h-1 w-20 2xl:w-28 bg-gradient-to-r from-cyan-400 to-purple-500"></div>
+            </div>
+            <a href="projects.html" class="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-bold tracking-wider uppercase text-sm 2xl:text-base group">
+                View All Projects
+                <svg class="w-5 h-5 2xl:w-6 2xl:h-6 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+
+        <div class="flex flex-wrap gap-4 mb-12 2xl:mb-16" id="portfolio-filters">
+            <button class="filter-btn active px-6 py-2 2xl:px-8 2xl:py-3 rounded-full border border-white/20 hover:border-cyan-400 hover:text-cyan-400 transition-all text-sm 2xl:text-base uppercase tracking-wider bg-white/5 text-cyan-400" data-filter="all">All</button>
+            <button class="filter-btn px-6 py-2 2xl:px-8 2xl:py-3 rounded-full border border-white/20 hover:border-purple-400 hover:text-purple-400 transition-all text-sm 2xl:text-base uppercase tracking-wider text-gray-400" data-filter="3d">3D Models</button>
+            <button class="filter-btn px-6 py-2 2xl:px-8 2xl:py-3 rounded-full border border-white/20 hover:border-yellow-400 hover:text-yellow-400 transition-all text-sm 2xl:text-base uppercase tracking-wider text-gray-400" data-filter="gd">Graphic Design</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-3 gap-8 2xl:gap-12 mb-16">
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="gd" data-title="Gourmet Food Advertising Concept" data-software="Adobe Photoshop" data-desc="A visually striking food advertising visual utilizing a ripped-paper masking technique to create depth. Designed to drive engagement with moody color grading, elegant typography, and high-contrast composition." data-gallery='[{"img": "./src/images/banana.avif", "label": "Social Media Ad Visual"}]'>
+                <img src="./src/images/banana.avif" alt="Food Ad Design" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">Food Ad Concept</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">Photoshop • Advertising</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="gd" data-title="In Your Own Space - Book Cover" data-software="Adobe Photoshop, Illustrator" data-desc="A minimalist and thought-provoking book cover mockup focused on mental wellness. The layout employs a muted earthy palette, clean typography, and a surreal cutout to convey a sense of calm and isolation." data-gallery='[{"img": "./src/images/book.avif", "label": "Hardcover Presentation Mockup"}]'>
+                <img src="./src/images/book.avif" alt="Book Cover Art" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">Book Cover Design</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">Photoshop • Print Design</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="gd" data-title="Abstract Monochrome Portrait" data-software="Adobe Photoshop" data-desc="An experimental typography and portrait poster utilizing a glass-displacement effect. The design explores brutalist layout aesthetics, strict grid alignments, and a moody grayscale palette." data-gallery='[{"img": "./src/images/poster.avif", "label": "Concrete Wall Poster Mockup"}]'>
+                <img src="./src/images/poster.avif" alt="Poster Design" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">Portrait Poster</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">Photoshop • Typography</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="3d" data-title="Modern Bedroom Interior" data-software="3ds Max, Corona Render" data-desc="Description for this project goes here. We will update this later." data-gallery='[{"img": "./src/images/bedroom.avif", "label": "Final Beauty Render"}]'>
+                <img src="./src/images/bedroom.avif" alt="Interior Designing" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">Interior Designing</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">3Dmax • 3D Rendering</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="3d" data-title="Luxury Kitchen Environment" data-software="Blender, Cycles" data-desc="Description for this project goes here. We will update this later." data-gallery='[
+                    {"img": "./src/images/kitchen1.avif", "label": "Main Wide Angle"},
+                    {"img": "./src/images/kitchen2.avif", "label": "Close up View"},
+                    {"img": "./src/images/kitchen3.avif", "label": "Lighting Details"},
+                    {"img": "./src/images/kitchen4.avif", "label": "Alternative Angle"}
+                 ]'>
+                <img src="./src/images/kitchen1.avif" alt="3D Environment" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">3D Environment</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">Blender • Modeling</p>
+                    <p class="text-xs text-white/50"><svg class="w-3 h-3 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg> 4 Views Inside</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item group relative overflow-hidden rounded-2xl cursor-pointer" data-category="3d" data-title="Toy Story Inspired Room" data-software="Maya, Arnold" data-desc="Description for this project goes here. We will update this later." data-gallery='[
+                    {"img": "./src/images/toy story1.avif", "label": "Full Room Render"},
+                    {"img": "./src/images/toy story2.avif", "label": "Desk Details"},
+                    {"img": "./src/images/toy story3.avif", "label": "Bedside Table"}
+                 ]'>
+                <img src="./src/images/toy story1.avif" alt="Product Rendering" class="w-full aspect-video object-cover transition-transform duration-500 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 2xl:p-8">
+                    <h3 class="text-2xl 2xl:text-3xl font-bold text-white mb-1">Product Rendering</h3>
+                    <p class="text-yellow-400 text-sm 2xl:text-base mb-4">Maya • 3D Rendering</p>
+                    <p class="text-xs text-white/50"><svg class="w-3 h-3 inline mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                        </svg> 3 Views Inside</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="text-center">
+            <p class="text-gray-400 mb-4 2xl:text-lg">Want to see more detailed case studies?</p>
+            <a href="https://www.behance.net/manishabohra06" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 2xl:px-10 2xl:py-4 rounded-full border border-white/20 hover:border-cyan-400 hover:text-cyan-400 hover:bg-cyan-400/10 transition-all font-medium text-lg 2xl:text-xl group">
+                Visit My Behance
+                <svg class="w-4 h-4 2xl:w-5 2xl:h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-4 relative">
+        <div class="absolute right-0 top-1/4 w-[600px] h-[600px] bg-purple-900/20 rounded-full mix-blend-screen filter blur-[100px] -z-10"></div>
+        <div class="max-w-[1600px] mx-auto">
+            <div class="mb-16 text-center md:text-left">
+                <h2 class="text-4xl md:text-5xl 2xl:text-6xl font-bold mb-4">What I Do</h2>
+                <p class="text-gray-400 max-w-xl 2xl:max-w-2xl 2xl:text-lg">Designs that don't just look good, but solve problems. Here is how I can help your brand.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:gap-10 gap-6">
+
+                <div class="group p-8 2xl:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-cyan-400/50 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 2xl:w-16 2xl:h-16 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-cyan-500 text-cyan-400 group-hover:text-black transition-colors">
+                        <svg class="w-8 h-8 2xl:w-10 2xl:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl 2xl:text-2xl font-bold mb-3 group-hover:text-cyan-400 transition-colors">3D Modeling</h3>
+                    <p class="text-gray-400 text-sm 2xl:text-base leading-relaxed">High-quality 3D assets, product visualization, and environments using Blender.</p>
+                </div>
+
+                <div class="group p-8 2xl:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-purple-500/50 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 2xl:w-16 2xl:h-16 bg-purple-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-purple-500 text-purple-400 group-hover:text-black transition-colors">
+                        <svg class="w-8 h-8 2xl:w-10 2xl:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl 2xl:text-2xl font-bold mb-3 group-hover:text-purple-400 transition-colors">Motion Graphics</h3>
+                    <p class="text-gray-400 text-sm 2xl:text-base leading-relaxed">Smooth animations, logo reveals, and promotional videos using After Effects.</p>
+                </div>
+
+                <div class="group p-8 2xl:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-pink-500/50 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 2xl:w-16 2xl:h-16 bg-pink-500/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-pink-500 text-pink-400 group-hover:text-black transition-colors">
+                        <svg class="w-8 h-8 2xl:w-10 2xl:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl 2xl:text-2xl font-bold mb-3 group-hover:text-pink-400 transition-colors">Brand Design</h3>
+                    <p class="text-gray-400 text-sm 2xl:text-base leading-relaxed">Logos, posters, and social media kits crafted with precision in Illustrator.</p>
+                </div>
+
+                <div class="group p-8 2xl:p-10 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 hover:border-yellow-400/50 transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 2xl:w-16 2xl:h-16 bg-yellow-400/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-yellow-400 text-yellow-400 group-hover:text-black transition-colors">
+                        <svg class="w-8 h-8 2xl:w-10 2xl:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl 2xl:text-2xl font-bold mb-3 group-hover:text-yellow-400 transition-colors">Video Editing</h3>
+                    <p class="text-gray-400 text-sm 2xl:text-base leading-relaxed">Professional cuts, color grading, and storytelling for YouTube & Reels.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 w-[800px] h-[800px] bg-gradient-to-t from-purple-900/20 to-transparent blur-[150px] -z-10"></div>
+        <div class="max-w-[1600px] mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 2xl:gap-24 items-center">
+
+                <div>
+                    <h2 class="text-4xl md:text-6xl 2xl:text-7xl font-black mb-6">LET'S WORK <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">TOGETHER</span>
+                    </h2>
+                    <p class="text-gray-400 text-lg 2xl:text-xl mb-8 leading-relaxed max-w-xl">
+                        Have a project in mind? Want to discuss a 3D model or a brand revamp?
+                        Drop me a line, and let's create something extraordinary.
+                    </p>
+
+                    <div class="space-y-6 2xl:space-y-8">
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 2xl:w-16 2xl:h-16 rounded-full bg-white/5 flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-black transition-all">
+                                <svg class="w-6 h-6 2xl:w-8 2xl:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm 2xl:text-base text-gray-500">Email Me</p>
+                                <p class="text-white font-medium 2xl:text-lg group-hover:text-cyan-400 transition-colors">manishabohra13432@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group cursor-pointer">
+                            <div class="w-12 h-12 2xl:w-16 2xl:h-16 rounded-full bg-white/5 flex items-center justify-center text-purple-400 group-hover:bg-purple-500 group-hover:text-black transition-all">
+                                <svg class="w-6 h-6 2xl:w-8 2xl:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm 2xl:text-base text-gray-500">Location</p>
+                                <p class="text-white font-medium 2xl:text-lg group-hover:text-purple-400 transition-colors">New Delhi, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white/5 p-8 2xl:p-12 rounded-3xl border border-white/10 backdrop-blur-md">
+                    <form id="contact-form" class="space-y-6 2xl:space-y-8">
+                        <input type="hidden" name="access_key" value="f0c4d9c5-4756-4be6-a6c3-32f22f325645">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 2xl:gap-8">
+                            <div class="space-y-2">
+                                <label class="text-sm 2xl:text-base text-gray-400 ml-2">Your Name</label>
+                                <input type="text" name="name" required placeholder="John Doe" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 2xl:px-6 2xl:py-4 text-white 2xl:text-lg placeholder-gray-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm 2xl:text-base text-gray-400 ml-2">Email Address</label>
+                                <input type="email" name="email" required placeholder="john@example.com" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 2xl:px-6 2xl:py-4 text-white 2xl:text-lg placeholder-gray-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all">
+                            </div>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm 2xl:text-base text-gray-400 ml-2">Service Interested In</label>
+                            <select name="service" class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 2xl:px-6 2xl:py-4 text-gray-300 2xl:text-lg focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all cursor-pointer">
+                                <option>Graphic Design</option>
+                                <option>3D Modeling</option>
+                                <option>Animation / Motion</option>
+                                <option>Video Editing</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm 2xl:text-base text-gray-400 ml-2">Your Message</label>
+                            <textarea name="message" rows="4" required placeholder="Tell me about your project..." class="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 2xl:px-6 2xl:py-4 text-white 2xl:text-lg placeholder-gray-600 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all resize-none"></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-4 2xl:py-5 rounded-xl font-bold text-lg 2xl:text-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transform hover:scale-[1.02] transition-all shadow-lg shadow-cyan-500/25">
+                            Send Message 🚀
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 bg-black pt-16 pb-8">
+        <div class="max-w-[1600px] mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <span class="text-3xl 2xl:text-4xl font-black tracking-widest text-white">MANISHA<span class="text-purple-500">.</span></span>
+                    <p class="text-gray-500 mt-2 text-sm 2xl:text-base">Designing the future, one pixel at a time.</p>
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="w-10 h-10 2xl:w-12 2xl:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all"><svg class="w-5 h-5 2xl:w-6 2xl:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.093 0 5.133 1.968 5.133 5.472 0 .528-.024 1.023-.07 1.47h-7.97c.103 1.84 1.226 2.95 2.906 2.95 1.376 0 2.376-.628 2.861-2.07l2.339.773zm-6.255-4.103h4.614c-.069-1.55-1.117-2.731-2.286-2.731-1.285 0-2.215 1.185-2.328 2.731zm-13.846-6.265h6.143v2.302c.866-1.503 2.504-2.435 4.305-2.435 2.871 0 5.093 2.062 5.093 5.378v7.878h-3.483v-7.142c0-2.053-1.134-3.141-2.656-3.141-1.846 0-3.109 1.465-3.109 4.305v5.978h-3.483v-13.123h-2.81v13.123h-3.483v-13.123z" /></svg></a>
+                    <a href="#" class="w-10 h-10 2xl:w-12 2xl:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-pink-600 hover:text-white transition-all"><svg class="w-5 h-5 2xl:w-6 2xl:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg></a>
+                    <a href="#" class="w-10 h-10 2xl:w-12 2xl:h-12 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:bg-blue-700 hover:text-white transition-all"><svg class="w-5 h-5 2xl:w-6 2xl:h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg></a>
+                </div>
+            </div>
+            <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs 2xl:text-sm text-gray-600">
+                <p>&copy; 2026 Manisha Portfolio. All rights reserved.</p>
+                <p class="mt-2 md:mt-0">Made with ❤️ using Tailwind</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="success-toast" class="fixed bottom-5 right-5 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-6 py-4 rounded-xl shadow-2xl transform translate-y-24 opacity-0 transition-all duration-500 z-50 flex items-center gap-3">
+        <div class="bg-white/20 rounded-full p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+        <div>
+            <h4 class="font-bold">Message Sent!</h4>
+            <p class="text-xs text-green-100">I will get back to you soon.</p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="fixed inset-0 z-[100] hidden flex-col lg:flex-row bg-black/98 backdrop-blur-md opacity-0 transition-opacity duration-300 touch-none">
+
+        <button id="close-lightbox" class="absolute top-6 right-6 lg:right-[360px] p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-full transition-all z-50">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+
+        <div class="relative flex-1 h-[60vh] lg:h-full flex items-center justify-center overflow-hidden border-b lg:border-b-0 lg:border-r border-white/10">
+
+            <button id="prev-btn" class="absolute left-4 top-1/2 -translate-y-1/2 p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-full transition-all z-50 hidden sm:block">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button id="next-btn" class="absolute right-4 top-1/2 -translate-y-1/2 p-3 text-gray-400 hover:text-white hover:bg-white/5 rounded-full transition-all z-50 hidden sm:block">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+
+            <div id="lightbox-img-container" class="relative w-full h-full flex items-center justify-center overflow-hidden cursor-grab">
+                <img id="lightbox-img" src="" class="max-h-[85vh] max-w-[85vw] lg:max-w-[70vw] object-contain transition-transform duration-200 select-none pointer-events-none" style="transform: scale(1) translate(0px, 0px);">
+            </div>
+
+            <div class="absolute bottom-4 left-6 bg-black/70 border border-white/10 backdrop-blur-md px-4 py-1.5 rounded-md text-xs text-cyan-400 tracking-wide font-medium">
+                <span id="pass-label">View: Final Render</span>
+            </div>
+
+            <div class="absolute bottom-4 right-6 flex items-center gap-3 bg-white/5 backdrop-blur-md px-4 py-2 rounded-full border border-white/10 shadow-2xl">
+                <button id="zoom-out" class="text-gray-400 hover:text-white p-1 rounded-full transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>
+                    </svg>
+                </button>
+                <span id="zoom-level" class="text-white text-xs font-bold w-10 text-center">100%</span>
+                <button id="zoom-in" class="text-gray-400 hover:text-white p-1 rounded-full transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-[340px] h-[40vh] lg:h-full bg-[#0a0a0a] flex flex-col p-6 overflow-y-auto custom-scroll relative">
+
+            <div class="mb-6 pt-2 lg:pt-12">
+                <h3 id="info-title" class="text-2xl font-black tracking-tight text-white mb-2">Project Title</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="text-[10px] uppercase font-bold tracking-widest bg-purple-500/20 text-purple-400 px-2.5 py-1 rounded-md border border-purple-500/30">Creative Work</span>
+                </div>
+                <div class="h-[1px] w-full bg-white/10 my-4"></div>
+            </div>
+
+            <div class="mb-6 flex-1">
+                <h4 class="text-xs uppercase font-bold tracking-wider text-gray-500 mb-2">Project Overview</h4>
+                <p id="info-desc" class="text-sm text-gray-400 leading-relaxed">Detailed info goes here...</p>
+
+                <h4 class="text-xs uppercase font-bold tracking-wider text-gray-500 mt-6 mb-2">Tools Used</h4>
+                <p id="info-software" class="text-xs text-cyan-400/90 font-mono">Software Names</p>
+            </div>
+
+            <div class="mt-auto pt-4 border-t border-white/10">
+                <div class="flex justify-between items-center mb-3">
+                    <h4 class="text-xs uppercase font-bold tracking-wider text-gray-400">Available Views</h4>
+                    <span class="text-xs font-mono text-gray-600"><span id="current-slide">1</span>/<span id="total-slides">1</span></span>
+                </div>
+                <div id="passes-thumbnail-grid" class="flex gap-3 overflow-x-auto pb-2 custom-scroll">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // --- 1. PORTFOLIO FILTER LOGIC ---
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('text-cyan-400', 'bg-white/5');
+                    b.classList.add('text-gray-400');
+                });
+                btn.classList.add('text-cyan-400', 'bg-white/5');
+                btn.classList.remove('text-gray-400');
+
+                const filterValue = btn.getAttribute('data-filter');
+                items.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // --- 2. CONTACT FORM LOGIC ---
+        const form = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const toast = document.getElementById('success-toast');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span>Sending...</span><div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>';
+            submitBtn.disabled = true;
+
+            const formData = new FormData(form);
+            const json = JSON.stringify(Object.fromEntries(formData));
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    if (response.status == 200) {
+                        toast.classList.remove('translate-y-24', 'opacity-0');
+                        form.reset();
+                        setTimeout(() => toast.classList.add('translate-y-24', 'opacity-0'), 5000);
+                    } else alert("Something went wrong!");
+                })
+                .catch(error => alert("Something went wrong!"))
+                .finally(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                });
+        });
+
+        // --- 3. UPGRADED ARTSTATION-STYLE LIGHTBOX ENGINE ---
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const imgContainer = document.getElementById('lightbox-img-container');
+        const closeBtn = document.getElementById('close-lightbox');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        // Metadata text references
+        const infoTitle = document.getElementById('info-title');
+        const infoDesc = document.getElementById('info-desc');
+        const infoSoftware = document.getElementById('info-software');
+        const passLabelText = document.getElementById('pass-label');
+        const thumbGrid = document.getElementById('passes-thumbnail-grid');
+
+        const zoomInBtn = document.getElementById('zoom-in');
+        const zoomOutBtn = document.getElementById('zoom-out');
+        const zoomLevelText = document.getElementById('zoom-level');
+        const currentSlideText = document.getElementById('current-slide');
+        const totalSlidesText = document.getElementById('total-slides');
+
+        let gallery = [];
+        let currentIndex = 0;
+        let scale = 1;
+        let translateX = 0,
+            translateY = 0;
+
+        // Mouse/Touch Drag state
+        let isDragging = false,
+            startX, startY;
+
+        // Touch Swipe/Pinch state
+        let touchStartX = 0,
+            touchStartY = 0;
+        let initialPinchDistance = null;
+        let initialScale = 1;
+
+        // Open Lightbox
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+            item.addEventListener('click', () => {
+                // Main Static Info Extract
+                infoTitle.innerText = item.getAttribute('data-title') || "Project Work";
+                infoDesc.innerText = item.getAttribute('data-desc') || "No description provided.";
+                infoSoftware.innerText = item.getAttribute('data-software') || "N/A";
+
+                const galleryData = item.getAttribute('data-gallery');
+                if (galleryData) {
+                    gallery = JSON.parse(galleryData);
+                } else {
+                    gallery = [{
+                        "img": item.querySelector('img').src,
+                        "label": "Default View"
+                    }];
+                }
+
+                currentIndex = 0;
+                totalSlidesText.innerText = gallery.length;
+
+                buildThumbnails();
+                updateLightbox();
+
+                lightbox.classList.remove('hidden');
+                lightbox.classList.add('flex');
+                setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Sidebar passes thumbnails array
+        function buildThumbnails() {
+            thumbGrid.innerHTML = "";
+            gallery.forEach((item, index) => {
+                const thumb = document.createElement('div');
+                thumb.className = `w-16 h-12 flex-shrink-0 rounded border cursor-pointer overflow-hidden transition-all duration-200 ${index === currentIndex ? 'border-cyan-400 scale-95 ring-2 ring-cyan-400/20' : 'border-white/10 hover:border-white/40'}`;
+                thumb.innerHTML = `<img src="${item.img}" class="w-full h-full object-cover select-none">`;
+
+                thumb.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    currentIndex = index;
+                    updateLightbox();
+                });
+                thumbGrid.appendChild(thumb);
+            });
+        }
+
+        function updateLightbox() {
+            lightboxImg.src = gallery[currentIndex].img;
+
+            // Sub-caption updates
+            passLabelText.innerText = `View: ${gallery[currentIndex].label}`;
+            currentSlideText.innerText = currentIndex + 1;
+
+            // Active state indicator for thumbnails
+            const thumbs = thumbGrid.querySelectorAll('div');
+            thumbs.forEach((t, idx) => {
+                if (idx === currentIndex) {
+                    t.className = "w-16 h-12 flex-shrink-0 rounded border cursor-pointer overflow-hidden transition-all duration-200 border-cyan-400 scale-95 ring-2 ring-cyan-400/20";
+                } else {
+                    t.className = "w-16 h-12 flex-shrink-0 rounded border cursor-pointer overflow-hidden transition-all duration-200 border-white/10 hover:border-white/40";
+                }
+            });
+
+            resetZoom();
+        }
+
+        // Close Lightbox
+        function closeLB() {
+            lightbox.classList.add('opacity-0');
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightbox.classList.remove('flex');
+            }, 300);
+            document.body.style.overflow = 'auto';
+        }
+        closeBtn.addEventListener('click', closeLB);
+
+        // Slider Navigation Buttons
+        prevBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : gallery.length - 1;
+            updateLightbox();
+        });
+        nextBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentIndex = (currentIndex < gallery.length - 1) ? currentIndex + 1 : 0;
+            updateLightbox();
+        });
+
+        // Apply Transform Engine
+        function applyTransform() {
+            lightboxImg.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+            zoomLevelText.innerText = Math.round(scale * 100) + '%';
+
+            if (scale > 1) {
+                imgContainer.classList.add('cursor-grab');
+                if (isDragging) imgContainer.classList.add('cursor-grabbing');
+                else imgContainer.classList.remove('cursor-grabbing');
+            } else {
+                imgContainer.classList.remove('cursor-grab', 'cursor-grabbing');
+            }
+        }
+
+        function resetZoom() {
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            lightboxImg.style.transition = "transform 0.2s ease-out";
+            applyTransform();
+        }
+
+        // Zoom Buttons
+        zoomInBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            scale = Math.min(scale + 0.5, 4);
+            applyTransform();
+        });
+        zoomOutBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            scale = Math.max(scale - 0.5, 0.5);
+            if (scale <= 1) {
+                translateX = 0;
+                translateY = 0;
+            }
+            applyTransform();
+        });
+
+        // Mouse Wheel Zoom
+        imgContainer.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            lightboxImg.style.transition = "none";
+
+            if (e.deltaY < 0) scale = Math.min(scale + 0.1, 4);
+            else scale = Math.max(scale - 0.1, 0.5);
+
+            if (scale <= 1) {
+                translateX = 0;
+                translateY = 0;
+            }
+            applyTransform();
+        });
+
+        // --- MOUSE DRAG LOGIC ---
+        imgContainer.addEventListener('mousedown', (e) => {
+            if (scale > 1) {
+                isDragging = true;
+                lightboxImg.style.transition = "none";
+                startX = e.clientX - translateX;
+                startY = e.clientY - translateY;
+                applyTransform();
+            }
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            translateX = e.clientX - startX;
+            translateY = e.clientY - startY;
+            applyTransform();
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isDragging) {
+                isDragging = false;
+                lightboxImg.style.transition = "transform 0.2s ease-out";
+                applyTransform();
+            }
+        });
+
+        // --- TOUCH GESTURE LOGIC (MOBILE SWIPE & PINCH TO ZOOM) ---
+        imgContainer.addEventListener('touchstart', (e) => {
+            if (e.touches.length === 1) {
+                if (scale > 1) {
+                    isDragging = true;
+                    lightboxImg.style.transition = "none";
+                    startX = e.touches[0].clientX - translateX;
+                    startY = e.touches[0].clientY - translateY;
+                } else {
+                    touchStartX = e.touches[0].clientX;
+                    touchStartY = e.touches[0].clientY;
+                }
+            } else if (e.touches.length === 2) {
+                isDragging = false;
+                initialPinchDistance = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+                initialScale = scale;
+            }
+        }, {
+            passive: false
+        });
+
+        imgContainer.addEventListener('touchmove', (e) => {
+            e.preventDefault();
+            if (e.touches.length === 1 && isDragging && scale > 1) {
+                translateX = e.touches[0].clientX - startX;
+                translateY = e.touches[0].clientY - startY;
+                applyTransform();
+            } else if (e.touches.length === 2 && initialPinchDistance) {
+                lightboxImg.style.transition = "none";
+                const currentDistance = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+                const pinchRatio = currentDistance / initialPinchDistance;
+                scale = Math.min(Math.max(initialScale * pinchRatio, 0.5), 4);
+
+                if (scale <= 1) {
+                    translateX = 0;
+                    translateY = 0;
+                }
+                applyTransform();
+            }
+        }, {
+            passive: false
+        });
+
+        imgContainer.addEventListener('touchend', (e) => {
+            if (isDragging) {
+                isDragging = false;
+                lightboxImg.style.transition = "transform 0.2s ease-out";
+                applyTransform();
+            }
+
+            if (scale === 1 && e.changedTouches.length === 1 && !initialPinchDistance) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffX = touchStartX - touchEndX;
+                const diffY = touchStartY - touchEndY;
+
+                if (Math.abs(diffX) > 50 && Math.abs(diffX) > Math.abs(diffY)) {
+                    if (diffX > 0) nextBtn.click();
+                    else prevBtn.click();
+                }
+            }
+
+            if (e.touches.length < 2) {
+                initialPinchDistance = null;
+            }
+        });
+    </script>
+</body>
+
+</html>
